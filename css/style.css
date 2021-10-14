@@ -1,0 +1,319 @@
+@import url('reset.css');
+@font-face {
+  font-family: Lato-black;
+  src: url('../fonts/lato-black.eot');
+  src: url('../fonts/Lato-black.eot?#iefix') format('embedded-opentype'), url('../fonts/Lato-black.woff2') format('woff2'), url('../fonts/Lato-black.woff') format('woff'), url('../fonts/Lato-black.ttf') format('ttf');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: Lato-bold;
+  src: url('../fonts/lato-bold.eot');
+  src: url('../fonts/Lato-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Lato-Bold.woff2') format('woff2'), url('../fonts/Lato-Bold.woff') format('woff'), url('../fonts/Lato-Bold.ttf') format('ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Lato-normal;
+  src: url('../fonts/lato-regular.eot');
+  src: url('../fonts/Lato-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Lato-regular.woff2') format('woff2'), url('../fonts/Lato-regular.woff') format('woff'), url('../fonts/Lato-regular.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Lato-light;
+  src: url('../fonts/lato-light.eot');
+  src: url('../fonts/Lato-light.eot?#iefix') format('embedded-opentype'), url('../fonts/Lato-light.woff2') format('woff2'), url('../fonts/Lato-light.woff') format('woff'), url('../fonts/Lato-light.ttf') format('ttf');
+  font-weight: 300;
+  font-style: normal;
+}
+.header {
+  height: 75px;
+  background-color: #222222;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  position: relative;
+}
+.header__sidebar {
+  margin-left: 231px;
+  display: flex;
+  align-items: flex-end;
+}
+.header__sidebar__logo {
+  margin-right: 41px;
+}
+.header__button-box {
+  margin-right: 231px;
+  display: flex;
+  align-items: flex-end;
+}
+.header__button-box__menu-btn {
+  padding: 0;
+  background-color: #222222;
+  border: none;
+}
+.header__button-box__menu-btn__pic {
+  fill: #E8E8E8;
+}
+.header__button-box__menu-btn__pic:hover {
+  fill: #F16D7F;
+}
+.header__button-box__link {
+  margin-left: 33px;
+}
+.header__nav {
+  visibility: hidden;
+  position: absolute;
+  top: 75px;
+  right: 0;
+  z-index: 1;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 34px 37px;
+}
+.header__nav__pic-x {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  fill: #6F6E6E;
+}
+.header__nav__pic-x:hover {
+  transform: scale(1.2);
+}
+.header__button-box__menu-btn__pic:checked .header__nav {
+  visibility: visible;
+  /* почему-то не работает(( */
+}
+.main__brand {
+  height: 764px;
+  background-color: #F1E4E6;
+  margin: 0 auto;
+  display: flex;
+}
+.main__brand__title {
+  margin-left: 92px;
+  align-self: center;
+  text-transform: uppercase;
+  font-family: 'Lato-bold';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38.4px;
+  position: relative;
+}
+.main__brand__title__big {
+  font-family: 'Lato-black';
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 57.6px;
+  display: block;
+}
+.main__brand__title__color {
+  color: #F16D7F;
+}
+.main__brand__title::before {
+  content: '';
+  background-color: #F16D7F;
+  width: 12px;
+  height: 92px;
+  position: absolute;
+  left: -28px;
+  top: 2px;
+}
+.main__sales {
+  margin: 0 auto;
+  margin-top: 65px;
+  position: relative;
+  max-width: 1140px;
+}
+.main__sales__title {
+  visibility: hidden;
+  position: absolute;
+}
+.main__sales__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.main__sales__list__item {
+  width: 360px;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+.main__sales__list__item__text {
+  font-family: Lato-normal;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  text-align: center;
+  color: #FFF;
+}
+.main__sales__list__item__caption {
+  font-family: Lato-bold;
+  font-size: 24px;
+  line-height: 28.8px;
+  text-align: center;
+  color: #F16D7F;
+}
+.main__sales__list__item:nth-child(1) {
+  background-image: url(../img/pic-for-women.jpg);
+}
+.main__sales__list__item:nth-child(2) {
+  background-image: url(../img/pic-for-men.jpg);
+}
+.main__sales__list__item:nth-child(3) {
+  background-image: url(../img/pic-for-kids.jpg);
+}
+.main__sales__list__item:nth-child(4) {
+  background-image: url(../img/ACCESORIES.jpg);
+  width: 1140px;
+  height: 180px;
+  margin-top: 30px;
+}
+.main__fetured {
+  margin: 0 auto;
+  margin-top: 96px;
+  max-width: 1140px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.main__fetured__title {
+  width: 100%;
+  font-family: Lato-normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  margin-bottom: 6px;
+  color: #222222;
+}
+.main__fetured__text {
+  width: 100%;
+  font-family: Lato-normal;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  margin-bottom: 48px;
+  color: #9F9F9F;
+}
+.main__fetured__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.main__fetured__list__item {
+  max-width: 360px;
+}
+.main__fetured__list__item__caption {
+  text-transform: uppercase;
+  font-family: 'Lato-normal';
+  margin: 25px 18px 0 18px;
+  font-family: Lato;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000;
+}
+.main__fetured__list__item__lead {
+  font-family: 'Lato-light';
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #5D5D5D;
+  margin: 13px 18px 0 18px;
+}
+.main__fetured__list__item__price {
+  font-family: Lato-normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #F16D7F;
+  margin: 18px 18px 50px 18px;
+}
+.main__fetured__btn {
+  display: block;
+  min-width: 210px;
+  min-height: 47px;
+  border: 1px solid #FF6A6A;
+  font-family: 'Lato-normal';
+  font-size: 16px;
+  line-height: 19px;
+  color: #FF6A6A;
+  margin: 0 auto;
+  margin-top: 18px;
+  margin-bottom: 95px;
+}
+.main__fetured__btn:hover {
+  background-color: #FF6A6A;
+  color: #fff;
+}
+.main__fetured__btn:active {
+  transform: scale(1.01);
+}
+.main__advantages {
+  min-height: 341px;
+  background-color: #222224;
+  position: relative;
+}
+.main__advantages__title {
+  visibility: hidden;
+  position: absolute;
+}
+.main__advantages__list {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.main__advantages__list__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  max-width: 360px;
+}
+.main__advantages__list__item__caption {
+  font-family: 'Lato-normal';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #FBFBFB;
+  margin-top: 163px;
+}
+.main__advantages__list__item__text {
+  font-family: 'Lato-light';
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #FBFBFB;
+  text-align: center;
+  margin-top: 16px;
+}
+.main__advantages__list__item:nth-child(1)::before {
+  content: url("../img/free-delivery.svg");
+  position: absolute;
+  width: 45px;
+  height: 32px;
+  top: 103px;
+}
+.main__advantages__list__item:nth-child(2)::before {
+  content: url("../img/discounts-pic.svg");
+  position: absolute;
+  width: 45px;
+  height: 32px;
+  top: 104px;
+}
+.main__advantages__list__item:nth-child(3)::before {
+  content: url("../img/quality-assurance.svg");
+  position: absolute;
+  width: 45px;
+  height: 32px;
+  top: 103px;
+}

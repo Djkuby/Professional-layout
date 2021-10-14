@@ -1,0 +1,376 @@
+@import url('./reset.css');
+
+@font-face {
+    font-family: Lato-black;
+    src: url('../fonts/lato-black.eot');
+    src: url('../fonts/Lato-black.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Lato-black.woff2') format('woff2'),
+         url('../fonts/Lato-black.woff') format('woff'),
+         url('../fonts/Lato-black.ttf') format('ttf'); ;
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: Lato-bold;
+    src: url('../fonts/lato-bold.eot');
+    src: url('../fonts/Lato-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Lato-Bold.woff2') format('woff2'),
+         url('../fonts/Lato-Bold.woff') format('woff'),
+         url('../fonts/Lato-Bold.ttf') format('ttf'); ;
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: Lato-normal;
+    src: url('../fonts/lato-regular.eot');
+    src: url('../fonts/Lato-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Lato-regular.woff2') format('woff2'),
+         url('../fonts/Lato-regular.woff') format('woff'),
+         url('../fonts/Lato-regular.ttf') format('ttf'); ;
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: Lato-light;
+    src: url('../fonts/lato-light.eot');
+    src: url('../fonts/Lato-light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Lato-light.woff2') format('woff2'),
+         url('../fonts/Lato-light.woff') format('woff'),
+         url('../fonts/Lato-light.ttf') format('ttf'); ;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.header {
+    height: 75px;
+    background-color: #222222;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    position: relative;
+
+    &__sidebar {
+        margin-left: 231px;
+        display: flex;
+        align-items: flex-end;
+
+        &__logo {
+            margin-right: 41px;
+        }
+    }
+
+    &__button-box {
+        margin-right: 231px;
+        display: flex;
+        align-items: flex-end;
+
+        &__menu-btn {
+            padding: 0;
+            background-color: #222222;
+            border: none;
+
+            &__pic {
+                fill: #E8E8E8;
+            }
+
+            &__pic:hover {
+                fill: #F16D7F;
+            }
+
+
+        }
+
+
+
+
+
+
+
+        &__link {
+            margin-left: 33px;
+        }
+
+    }
+
+    &__nav {
+        visibility: hidden;
+        position: absolute;
+        top: 75px;
+        right: 0;
+        z-index: 1;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 34px 37px;
+
+        &__pic-x {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            fill: #6F6E6E;
+
+        }
+
+        &__pic-x:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    &__button-box__menu-btn__pic:checked .header__nav {
+        visibility: visible;  /* почему-то не работает(( */
+       
+    }
+}
+
+.main {
+    &__brand {
+        height: 764px;
+        background-color: #F1E4E6;
+        margin: 0 auto;
+        display: flex;
+
+
+
+        &__title {
+            margin-left: 92px;
+            align-self: center;
+            text-transform: uppercase;
+            font-family: 'Lato-bold';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 38.4px;
+            position: relative;
+
+            &__big {
+                font-family: 'Lato-black';
+                font-weight: 900;
+                font-size: 48px;
+                line-height: 57.6px;
+                display: block;
+            }
+
+            &__color {
+                color: #F16D7F;
+            }
+        }
+        &__title::before {
+            content: '';
+            background-color: #F16D7F;
+            width: 12px;
+            height: 92px;
+            position: absolute;
+            left: -28px;
+            top: 2px;
+        }
+
+    }
+    &__sales {
+        margin: 0 auto;
+        margin-top: 65px;
+        position: relative;
+        max-width: 1140px;
+        
+        &__title {
+            visibility: hidden;
+            position: absolute;
+        }
+        &__list {
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            &__item {
+                width: 360px;
+                height: 260px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-transform: uppercase;
+                &__text {
+                    font-family: Lato-normal;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 19px;
+                    text-align: center;
+                    color: #FFF;
+                }
+                &__caption {
+                    font-family: Lato-bold;
+                    font-size: 24px;
+                    line-height: 28.8px;
+                    text-align: center;
+                    color: #F16D7F;
+                }
+            }
+            &__item:nth-child(1) {
+                background-image: url(../img/pic-for-women.jpg);
+            }
+            &__item:nth-child(2) {
+                background-image: url(../img/pic-for-men.jpg);
+            }
+            &__item:nth-child(3) {
+                background-image: url(../img/pic-for-kids.jpg);
+            }
+            &__item:nth-child(4) {
+                background-image: url(../img/ACCESORIES.jpg);
+                width: 1140px;
+                height: 180px;
+                margin-top: 30px;
+            }
+        }
+        
+    }
+    &__fetured {
+        margin: 0 auto;
+        margin-top: 96px;
+        max-width: 1140px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &__title {
+            width: 100%;
+            font-family: Lato-normal;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 36px;
+            text-align: center;
+            margin-bottom: 6px;
+            color: #222222;
+        }
+        &__text {
+            width: 100%;
+            font-family: Lato-normal;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            margin-bottom: 48px;
+            color: #9F9F9F;
+
+        }
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            &__item {
+                max-width: 360px;
+                
+                &__caption {
+                    text-transform: uppercase;
+                    font-family: 'Lato-normal';
+                    font-size: 13px;
+                    line-height: 16px;
+                    margin: 25px 18px 0 18px;
+                    font-family: Lato;
+                    font-size: 13px;
+                    line-height: 16px;
+                    color: #000000;
+                }
+                &__lead {
+                    font-family: 'Lato-light';
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #5D5D5D;
+                    margin: 13px 18px 0 18px;
+                }
+                &__price {
+                    font-family: Lato-normal;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: #F16D7F;
+                    margin: 18px 18px 50px 18px;
+                }
+            }
+        }
+        &__btn {
+            display: block;
+            min-width: 210px;
+            min-height: 47px;
+            border: 1px solid #FF6A6A;
+            font-family: 'Lato-normal';
+            font-size: 16px;
+            line-height: 19px;
+            color: #FF6A6A;
+            margin: 0 auto;
+            margin-top: 18px;
+            margin-bottom: 95px;
+        }
+        &__btn:hover {
+            background-color: #FF6A6A;
+            color: #fff;
+        }
+        &__btn:active {
+            transform: scale(1.01);
+        }
+    }
+    &__advantages {
+        min-height: 341px;
+        background-color: #222224;
+        position: relative;
+        &__title {
+            visibility: hidden;
+            position: absolute;
+        }
+        &__list {
+            max-width: 1140px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            &__item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                max-width: 360px;
+                &__caption {
+                    font-family: 'Lato-normal';
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    color: #FBFBFB;
+                    margin-top: 163px;
+
+                }
+                &__text {
+                    font-family: 'Lato-light';
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #FBFBFB;
+                    text-align: center;
+                    margin-top: 16px;
+                }
+                
+            }
+            &__item:nth-child(1)::before {
+                content: url("../img/free-delivery.svg");
+                position: absolute;
+                width: 45px;
+                height: 32px;
+                top: 103px;
+            }
+            &__item:nth-child(2)::before {
+                content: url("../img/discounts-pic.svg");
+                position: absolute;
+                width: 45px;
+                height: 32px;
+                top: 104px;
+            }
+            &__item:nth-child(3)::before {
+                content: url("../img/quality-assurance.svg");
+                position: absolute;
+                width: 45px;
+                height: 32px;
+                top: 103px;
+            }
+            
+        }
+       
+    }
+}
