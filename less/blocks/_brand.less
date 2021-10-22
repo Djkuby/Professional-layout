@@ -1,0 +1,35 @@
+.main {
+    &__brand {
+        height: 764px;
+        background-color: #F1E4E6;
+        margin: 0 auto;
+        display: flex;
+        
+        &__title {
+            margin-left: 92px;
+            align-self: center;
+            text-transform: uppercase;
+            .Lato-bold(32px, 38px);
+            position: relative;
+
+            &__big {
+                .Lato-black(48px, 58px);
+                display: block;
+            }
+
+            &__color {
+                color: #F16D7F;
+            }
+        }
+        &__title::before {
+            content: '';
+            background-color: #F16D7F;
+            width: 12px;
+            height: 92px;
+            position: absolute;
+            left: -28px;
+            top: 2px;
+        }
+
+    }
+}

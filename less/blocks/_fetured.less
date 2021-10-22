@@ -1,0 +1,88 @@
+.main {
+    
+    
+    &__fetured {
+        margin: 0 auto;
+        margin-top: 96px;
+        max-width: 1140px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &__title {
+            width: 100%;
+            font-family: Lato-normal;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 36px;
+            text-align: center;
+            margin-bottom: 6px;
+            color: #222222;
+        }
+        &__text {
+            width: 100%;
+            font-family: Lato-normal;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            margin-bottom: 48px;
+            color: #9F9F9F;
+
+        }
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            &__item {
+                max-width: 360px;
+                
+                &__caption {
+                    text-transform: uppercase;
+                    font-family: 'Lato-normal';
+                    font-size: 13px;
+                    line-height: 16px;
+                    margin: 25px 18px 0 18px;
+                    font-family: Lato;
+                    font-size: 13px;
+                    line-height: 16px;
+                    color: #000000;
+                }
+                &__lead {
+                    font-family: 'Lato-light';
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #5D5D5D;
+                    margin: 13px 18px 0 18px;
+                }
+                &__price {
+                    font-family: Lato-normal;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: #F16D7F;
+                    margin: 18px 18px 50px 18px;
+                }
+            }
+        }
+        &__btn {
+            display: block;
+            min-width: 210px;
+            min-height: 47px;
+            border: 1px solid #FF6A6A;
+            font-family: 'Lato-normal';
+            font-size: 16px;
+            line-height: 19px;
+            color: #FF6A6A;
+            margin: 0 auto;
+            margin-top: 18px;
+            margin-bottom: 95px;
+        }
+        &__btn:hover {
+            background-color: #FF6A6A;
+            color: #fff;
+        }
+        &__btn:active {
+            transform: scale(1.01);
+        }
+    }
+}
