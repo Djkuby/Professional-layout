@@ -1,0 +1,104 @@
+.header {
+    min-height: 75px;
+    background-color: #222222;
+        margin: 0 auto;
+        padding-top: 18px;
+        box-sizing: border-box;
+
+    &__container {
+        max-width: 1140px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        &__sidebar {
+            display: flex;
+            align-items: flex-end;
+
+            &__logo {
+                margin-right: 41px;
+            }
+        }
+
+        &__button-box {
+            display: flex;
+            align-items: flex-end;
+
+            &__menu-btn {
+                padding: 0;
+                background-color: #222222;
+                border: none;
+
+                &__pic {
+                    fill: #E8E8E8;
+                }
+
+                &__pic:hover {
+                    fill: #F16D7F;
+                }
+            }
+
+            &__link {
+                margin-left: 33px;
+            }
+        }
+    }
+    &__nav {
+        visibility: hidden;
+        position: absolute;
+        top: 75px;
+        right: 0;
+        z-index: 1;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+
+        padding: 34px 37px;
+        box-shadow: 0 0 5px 2px;
+
+        &__pic-x {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            fill: #6F6E6E;
+
+        }
+
+        &__pic-x:hover {
+            transform: scale(1.2);
+        }
+        &__title {
+            font-family: 'Lato-bold';
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            color: #000000;
+            margin-bottom: 4px;
+        }
+        &__list {
+            &__item {
+                &__title {
+                    margin-top: 20px;
+                    font-family: 'Lato-normal';
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #F16D7F;
+                }
+                &__sub-list {
+                    &__item {
+                        font-family: 'Lato-normal';
+                         font-size: 14px;
+                        line-height: 17px;
+                        color: #6F6E6E;
+                        margin-top: 11px;
+                        margin-left: 22px;
+                    }
+                }
+            }
+        }
+    }
+
+   
+}
