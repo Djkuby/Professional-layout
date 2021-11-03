@@ -42,6 +42,23 @@
 
             &__link {
                 margin-left: 33px;
+                display: block;
+                position: relative;
+
+                &__quantity {
+                    position: absolute;
+                    right: -9px;
+                    top: -8px;
+                    background-color: #F16D7F;
+                    width: 19px;
+                    height: 19px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                    .Lato-normal(12px, 14px);
+                    border-radius: 50%;
+                }
             }
         }
     }
@@ -101,4 +118,23 @@
     }
 
    
+}
+@media (max-width:1200px) {
+    .header__container__sidebar {
+        margin-left: 32px;
+    }
+    .header__container__button-box {
+        margin-right: 41px;
+    }
+}
+@media (max-width:400px) {
+    .header__container__sidebar {
+        margin-left: 16px;
+    }
+    .header__container__button-box {
+        margin-right: 16px;
+    }
+    .header__container__button-box__link {
+        display: none;
+    }
 }

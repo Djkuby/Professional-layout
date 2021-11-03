@@ -10,6 +10,7 @@
         &__form {
             max-width: 360px;
             margin-top: 64px;
+
             &__wrap {
                 display: flex;
                 flex-wrap: wrap;
@@ -74,18 +75,8 @@
                 border: none;
                 margin-bottom: 96px;
                 position: relative;
-                
-                &::after { /* Почему не работает не понимаю((? */
-                    content: '';
-                    display: inline-flex;
-                    width: 17px;
-                    height: 10px;
-                    background: url('../img/arrow.png') center no-repeat black;
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    border: 1px solid red;
-                    
+                &__arrow {
+                    margin-left: 20px;
                 }
             }
         }
@@ -118,9 +109,6 @@
                         left:-30px;
                         top: 5px;
                         position: absolute;
-                        
-                        
-    
                     }
                 }
             }
@@ -128,3 +116,20 @@
     }
 }
 @import "blocks/_footer.less";
+
+@media (max-width:1140px) {
+    .main__registration__form {
+        margin: 64px 22px 0 16px;
+    }
+    
+}
+@media (max-width:600px) {
+    .main__registration__form__sub-button {
+        margin-bottom: 20px;
+    }
+    .main__registration__loyalty {
+        margin-top: 20px;
+        padding: 0 8px 0 9px;
+    }
+        
+}

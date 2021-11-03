@@ -1,11 +1,17 @@
 .main {
     &__brand {
-        height: 764px;
+        max-height: 764px;
         background-color: #F1E4E6;
         margin: 0 auto;
         display: flex;
+        justify-content: center;
         
+        &__pic {
+            max-width: 800px;
+            align-self: center;
+        }
         &__title {
+            max-width: 800px;
             margin-left: 92px;
             align-self: center;
             text-transform: uppercase;
@@ -21,15 +27,46 @@
                 color: #F16D7F;
             }
         }
-        &__title::before {
-            content: '';
-            background-color: #F16D7F;
-            width: 12px;
-            height: 92px;
-            position: absolute;
-            left: -28px;
-            top: 2px;
-        }
+        
+        
 
+    }
+}
+@media (max-width:1200px) {
+    .main__brand__pic {
+        max-width: 50%;
+    }
+    .main__brand__title {
+        max-width: 50%;
+        margin-left: 28px;
+        .Lato-bold(24px, 28px);
+        &__big {
+            .Lato-black(44px, 53px);
+        }
+    }
+}
+@media (max-width:600px) {
+    .main__brand {
+        min-height: 363px;
+    }
+    .main__brand__pic {
+        display: none;
+    }
+    .main__brand__title {
+        max-width: 100%;
+        margin-left: 28px;
+        .Lato-bold(20px, 24px);
+        &__big {
+            .Lato-black(38px, 45px);
+        }
+    }
+    .main__brand__title::before {
+        content: '';
+        background-color: #F16D7F;
+        width: 12px;
+        height: 61px;
+        position: absolute;
+        left: -28px;
+        top: 6px;
     }
 }
