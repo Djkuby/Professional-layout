@@ -93,7 +93,7 @@
                             <li class="main__cart__cards__card__description__list__item">Price:&nbsp;<span class="main__cart__cards__card__description__list__item__content red">$300</span></li>
                             <li class="main__cart__cards__card__description__list__item">Color:&nbsp;<span class="main__cart__cards__card__description__list__item__content">Red</span></li>
                             <li class="main__cart__cards__card__description__list__item">Size:&nbsp;<span class="main__cart__cards__card__description__list__item__content"> Xl</span></li>
-                            <li class="main__cart__cards__card__description__list__item">Quantity:&nbsp;<span class="main__cart__cards__card__description__list__item__content"><input type="number" step="1" min="1" max="100" value="2" form="cart-form"></span></li>
+                            <li class="main__cart__cards__card__description__list__item">Quantity:&nbsp;<span class="main__cart__cards__card__description__list__item__content"><input type="number" step="1" min="1" max="100" value="2" ></span></li>
                         </ul>
                     </div>
                 </div>
@@ -108,20 +108,20 @@
                             <li class="main__cart__cards__card__description__list__item">Price:&nbsp;<span class="main__cart__cards__card__description__list__item__content red">$300</span></li>
                             <li class="main__cart__cards__card__description__list__item">Color:&nbsp;<span class="main__cart__cards__card__description__list__item__content">Red</span></li>
                             <li class="main__cart__cards__card__description__list__item">Size:&nbsp;<span class="main__cart__cards__card__description__list__item__content"> Xl</span></li>
-                            <li class="main__cart__cards__card__description__list__item">Quantity:&nbsp;<span class="main__cart__cards__card__description__list__item__content"><input type="number" step="1" min="1" max="100" value="2" form="cart-form"></span></li>
+                            <li class="main__cart__cards__card__description__list__item">Quantity:&nbsp;<span class="main__cart__cards__card__description__list__item__content"><input type="number" step="1" min="1" max="100" value="2" ></span></li>
                         </ul>
                     </div>
                 </div>
                 <div class="main__cart__cards__btn-box">
-                    <button class="main__cart__cards__btn-box__btn">clear shopping cart</button>
-                    <button class="main__cart__cards__btn-box__btn">continue shopping</button>
+                    <button class="main__cart__cards__btn-box__btn">Clear shopping cart</button>
+                    <button class="main__cart__cards__btn-box__btn">Continue shopping</button>
                 </div>
             </div>
-            <form action="#" method="post" id="cart-form" class="main__cart__form">
-                <fieldset class="main__cart__form__wrp">
-                    <legend class="main__cart__form__wrp__title">
+            <div class="main__cart__form">
+                <div class="main__cart__form__wrp">
+                    <h2 class="main__cart__form__wrp__title">
                         shipping adress
-                    </legend>
+                    </h2>
                     <label class="main__cart__form__wrp__caption-hidden" for="country">country</label>
                     <input class="main__cart__form__wrp__input" type="text" placeholder="Bangladesh" id="country">
                     <label class="main__cart__form__wrp__caption-hidden" for="state">State</label>
@@ -129,20 +129,21 @@
                     <label class="main__cart__form__wrp__caption-hidden" for="postcode">postcode</label>
                     <input class="main__cart__form__wrp__input" type="text" placeholder="Postcode / Zip" id="postcode">
                     <button class="main__cart__form__wrp__btn">get a quote</button>
-                </fieldset>
-            </form>
-            <div class="main__cart__total">
-                <div class="main__cart__total__sub">
-                    sub total&nbsp;<span class="main__cart__total__sub__cont">$900</span> 
                 </div>
-                <div class="main__cart__total__grand">
-                    grand total&nbsp;<span class="main__cart__total__grand__cont">$900</span> 
+                <div class="main__cart__form__total">
+                    <p class="main__cart__form__total__sub">
+                        sub total&nbsp;<span class="main__cart__form__total__sub__cont">$900</span> 
+                    </p>
+                    <p class="main__cart__form__total__grand">
+                        grand total&nbsp;<span class="main__cart__form__total__grand__cont">$900</span> 
+                    </p>
+                    <hr class="main__cart__form__total__hr">
+                    <button type="submit"  class="main__cart__form__total__btn">
+                        proceed to checkout
+                    </button>
                 </div>
-                <hr class="main__cart__total__hr">
-                <button type="submit" form="cart-form" class="main__cart__total__btn">
-                    proceed to checkout
-                </button>
             </div>
+            
         </section>
     </main>
     <footer class="footer">
@@ -156,9 +157,9 @@
             <div class="footer__subscribe__column">
                 <h2 class="footer__subscribe__column__title">subscribe <span
                         class="footer__subscribe__column__title__subtitle">for our newletter and promotion</span></h2>
-                <form class="footer__subscribe__column__send" action="" method="post">
+                <form class="footer__subscribe__column__send" action="#" method="post">
                     <input class="footer__subscribe__column__send__inpt" type="email" placeholder="Enter Your Email">
-                    <input class="footer__subscribe__column__send__btn type=" submit" value="Subscribe">
+                    <input class="footer__subscribe__column__send__btn" type="submit" value="Subscribe">
                 </form>
             </div>
 
