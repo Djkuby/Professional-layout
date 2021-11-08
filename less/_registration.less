@@ -77,6 +77,25 @@
                 position: relative;
                 &__arrow {
                     margin-left: 20px;
+                    fill: white;
+                }
+                &:hover {
+                    background-color: #FFF;
+                    color: #F16D7F;
+                    border: 1px solid #F16D7F;
+                    box-sizing: border-box;
+                }
+                &:hover .main__registration__form__sub-button__arrow{
+                    fill: #F16D7F;
+                }
+                &:active {
+                    transform: scale(1.1);
+                    color: black;
+                    border: 1px solid #000;
+                    box-sizing: border-box;
+                }
+                &:active .main__registration__form__sub-button__arrow{
+                    fill: #000;
                 }
             }
         }
